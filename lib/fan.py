@@ -9,7 +9,7 @@ def speed(temp):
     intercept = (function['max_temperature'] * function['min_speed'] - function['min_temperature'] * function['max_speed']) / (function['max_temperature'] - function['min_temperature'])
     speed = slope * temp + intercept
 
-    debug({ "temp": temp, "speed": speed })
+    # debug({ "temp": temp, "speed": speed })
 
     return speed
 
