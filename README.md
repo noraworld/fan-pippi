@@ -39,7 +39,7 @@ After=network.target
 [Service]
 Type=simple
 WorkingDirectory=/path/to/fan-pippi
-ExecStart=python main.py # you may need to specify a full path of executable python
+ExecStart=python main.py # you may need to specify a full path of a executable python
 TimeoutSec=15
 Restart=always
 
@@ -56,3 +56,9 @@ systemctl --user start fan-pippi.service
 ```
 
 Note that you need to setup and start the service at a user level, not a system wide.
+
+## The origin of this project’s name
+
+This project’s name stands for a CPU **fan** control tool using **Pip** for Raspberry **Pi**.
+
+But, it has one more meaning. "Pippi" is a part of "Kare-pippi" (彼ピッピ), which is a Japanese slang used among high school girls in Japan. It means "more than friends, but not lovers". This project’s concept is "enough cooler, but not noisy", so it's a pun on the meaning "Kare-pippi".
