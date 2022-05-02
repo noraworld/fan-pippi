@@ -29,7 +29,7 @@ TODO: Make a graph like [this](https://www.google.com/search?q=cpu+fan+control&t
 ## Daemonization
 First, create a service file for `systemctl` under the `$HOME/.config/systemd/user/` directory.
 
-```
+```shell
 # $HOME/.config/systemd/user/fan-pippi.service
 
 [Unit]
