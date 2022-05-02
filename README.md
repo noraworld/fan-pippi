@@ -9,6 +9,12 @@ pip install -r requirements.txt
 
 A reboot is required after the installation to perform `vcgencmd` without a root privilege
 
+## Setup
+
+```shell
+cp fancontrol.json.sample fancontrol.json
+```
+
 ## Usage
 
 ```shell
