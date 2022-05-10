@@ -15,6 +15,12 @@ A reboot is required after the installation to perform `vcgencmd` without a root
 cp fancontrol.json.sample fancontrol.json
 ```
 
+If you always want to keep your fancontrol the same as a latest sample JSON, execute below instead of above.
+
+```shell
+ln -s fancontrol.json.sample fancontrol.json
+```
+
 ## Usage
 
 ```shell
