@@ -21,6 +21,8 @@ If you always want to keep your fancontrol the same as a latest sample JSON, exe
 ln -s fancontrol.json.sample fancontrol.json
 ```
 
+And then pull from this repository when `fancontrol.json.sample` is updated. No need to restart a daemon. The change will be automatically applied.
+
 ## Usage
 
 ```shell
