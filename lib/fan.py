@@ -1,8 +1,5 @@
 import json
 
-FAN_PIN = 14
-PWM_FREQ = 25
-
 def speed(temp):
     function = get(temp)
     slope = (function['max_speed'] - function['min_speed']) / (function['max_temperature'] - function['min_temperature'])
