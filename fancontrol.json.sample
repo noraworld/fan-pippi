@@ -2,24 +2,24 @@
     "function": [
         {
             "min_temperature": 0,
-            "max_temperature": 45,
+            "max_temperature": 40,
             "min_speed": 0,
             "max_speed": 0
         },
         {
-            "min_temperature": 45,
-            "max_temperature": 55,
+            "min_temperature": 40,
+            "max_temperature": 50,
             "min_speed": 25,
-            "max_speed": 50
+            "max_speed": 40
         },
         {
-            "min_temperature": 55,
-            "max_temperature": 65,
+            "min_temperature": 50,
+            "max_temperature": 60,
             "min_speed": 40,
-            "max_speed": 70
+            "max_speed": 75
         },
         {
-            "min_temperature": 65,
+            "min_temperature": 60,
             "max_temperature": 1000,
             "min_speed": 100,
             "max_speed": 100
