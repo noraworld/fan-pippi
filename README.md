@@ -41,7 +41,7 @@ cp .env.sample .env
 | `PWM_FREQ` | A PWM frequency                                                                                           | Integer | `25`         |
 
 ![](https://prismic-io.s3.amazonaws.com/rpf-products/3495afb8-59f5-4972-86df-cd292b234745_Case+Fan+Instructional+diagram.png)
-References: https://www.raspberrypi.com/products/raspberry-pi-4-case-fan/
+_References: https://www.raspberrypi.com/products/raspberry-pi-4-case-fan/_
 
 
 
