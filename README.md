@@ -30,7 +30,15 @@ python main.py
 ```
 
 ## How to make the fan control your own
-TBD
+You can tune up the fan control values referencing `fancontrol.json.sample`.
+
+| Key               | Description                                                                                  | Type    |
+| ----------------- | -------------------------------------------------------------------------------------------- | ------- |
+| `min_temperature` | A minimum temperature that the function within the range is applied (include a boundary)     | Integer |
+| `max_temperature` | A maximum temperature that the function within the range is applied (not include a boundary) | Integer |
+| `min_speed`       | A minimum fan speed within the range of the function                                         | Integer |
+| `max_speed`       | A maximum fan speed within the range of the function                                         | Integer |
+| `interval`        | A value how often the function is updated                                                    | Integer |
 
 TODO: Make a graph like [this](https://www.google.com/search?q=cpu+fan+control&tbm=isch#imgrc=uiX82SZ311m20M).
 
