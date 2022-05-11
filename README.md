@@ -41,7 +41,6 @@ cp .env.sample .env
 | `PWM_FREQ` | A PWM frequency                                                                                           | Integer | `25`         |
 
 ![](https://prismic-io.s3.amazonaws.com/rpf-products/3495afb8-59f5-4972-86df-cd292b234745_Case+Fan+Instructional+diagram.png)
-
 References: https://www.raspberrypi.com/products/raspberry-pi-4-case-fan/
 
 
@@ -103,7 +102,6 @@ Note that you need to setup and start the service at a user level, not a system 
 
 
 ## The origin of this project’s name
+This project’s name stands for a CPU "**fan**" control tool using "**Pip**" for Raspberry "**Pi**".
 
-This project’s name stands for a CPU **fan** control tool using **Pip** for Raspberry **Pi**.
-
-But, it has one more meaning. "Pippi" is a part of "Kare-pippi" (彼ピッピ), which is a Japanese slang used among high school girls in Japan. It means "more than friends, but not lovers". This project’s concept is "enough cooler, but not noisy", so it's a pun on the meaning "Kare-pippi".
+But, it has one more meaning. "Pippi" is a part of "Kare-pippi" (彼ピッピ), which is a Japanese slang used among high school girls in Japan. It means "more than friends, but not lovers." This project’s concept is "enough cooler, but not noisy", so it's a pun on the meaning "Kare-pippi."
