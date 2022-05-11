@@ -1,4 +1,7 @@
 # fan-pippi
+A scalable fan control tool for Raspberry Pi.
+
+
 
 ## Requirements
 
