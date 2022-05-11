@@ -9,6 +9,8 @@ pip install -r requirements.txt
 
 A reboot is required after the installation to perform `vcgencmd` without a root privilege.
 
+
+
 ## Setup
 
 ```shell
@@ -23,11 +25,15 @@ ln -s fancontrol.json.sample fancontrol.json
 
 And then pull from this repository when `fancontrol.json.sample` is updated. No need to restart a daemon. The change will be automatically applied.
 
+
+
 ## Usage
 
 ```shell
 python main.py
 ```
+
+
 
 ## How to make the fan control your own
 You can tune up the fan control values referencing `fancontrol.json.sample`.
@@ -41,6 +47,8 @@ You can tune up the fan control values referencing `fancontrol.json.sample`.
 | `interval`        | A value how often the function is updated                                                    | Integer |
 
 TODO: Make a graph like [this](https://www.google.com/search?q=cpu+fan+control&tbm=isch#imgrc=uiX82SZ311m20M).
+
+
 
 ## Daemonization
 First, create a service file for `systemctl` under the `$HOME/.config/systemd/user/` directory.
@@ -72,6 +80,8 @@ systemctl --user start fan-pippi.service
 ```
 
 Note that you need to setup and start the service at a user level, not a system wide.
+
+
 
 ## The origin of this project’s name
 
