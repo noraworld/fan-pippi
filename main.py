@@ -3,16 +3,15 @@ from lib import cpu
 from lib import fan
 from lib import gpio
 
-SLEEP_INTERVAL = 10
-
 if __name__ == '__main__':
     motor = gpio.setup()
 
     try:
         while True:
-            speed = fan.speed(cpu.temp())
+            temp = cpu.temp()
+            speed = fan.speed(temp)
             motor.start(speed)
-            time.sleep(SLEEP_INTERVAL)
+            time.sleep(fan.interval(temp))
 
     except:
         motor.stop()

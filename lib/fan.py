@@ -11,6 +11,10 @@ def speed(temp):
 
     return speed
 
+def interval(temp):
+    function = get(temp)
+    return function['interval']
+
 def get(temp):
     file = open('fancontrol.json')
     data = json.load(file)
