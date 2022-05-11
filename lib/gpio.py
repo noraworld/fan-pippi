@@ -1,14 +1,17 @@
+from dotenv import load_dotenv
+import os
 import RPi.GPIO as GPIO
 
-FAN_PIN = 14
-PWM_FREQ = 25
-
 def setup():
+    load_dotenv()
+    fan_pin = int(os.getenv('FAN_PIN'))
+    pwm_freq = int(os.getenv('PWM_FREQ'))
+
     GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BCM)
-    GPIO.setup(FAN_PIN, GPIO.OUT, initial = GPIO.LOW)
+    GPIO.setup(fan_pin, GPIO.OUT, initial = GPIO.LOW)
 
-    return GPIO.PWM(FAN_PIN, PWM_FREQ)
+    return GPIO.PWM(fan_pin, pwm_freq)
 
 def cleanup():
     GPIO.cleanup()
