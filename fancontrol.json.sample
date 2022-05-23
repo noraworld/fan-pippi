@@ -11,20 +11,20 @@
             "min_temperature": 40,
             "max_temperature": 50,
             "min_speed": 0,
-            "max_speed": 50,
+            "max_speed": 30,
             "interval": 60
         },
         {
             "min_temperature": 50,
             "max_temperature": 55,
-            "min_speed": 50,
-            "max_speed": 70,
+            "min_speed": 30,
+            "max_speed": 50,
             "interval": 60
         },
         {
             "min_temperature": 55,
             "max_temperature": 60,
-            "min_speed": 70,
+            "min_speed": 50,
             "max_speed": 100,
             "interval": 60
         },
