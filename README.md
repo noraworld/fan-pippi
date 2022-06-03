@@ -16,18 +16,19 @@ A reboot is required after the installation so that `vcgencmd` can be performed 
 
 ## Setup
 ### `fancontrol.json`
+Choose what you prefer from `fancontrol.sample/`.
 
 ```shell
-cp fancontrol.sample.json fancontrol.json
+cp fancontrol.sample/<EITHER>.json fancontrol.json
 ```
 
-If you always want to keep your fancontrol the same as a latest sample JSON, execute below instead of above.
+If you always want to keep your fancontrol the same as one of the latest sample JSON files, execute below instead of above.
 
 ```shell
-ln -s fancontrol.sample.json fancontrol.json
+ln -fs fancontrol.sample/<EITHER>.json fancontrol.json
 ```
 
-And then pull from this repository when `fancontrol.sample.json` is updated. No need to restart a daemon. The change will be automatically applied.
+And then pull from this repository when `fancontrol.sample/` is updated. No need to restart a daemon. The changes will be automatically applied.
 
 ### `.env`
 
@@ -54,7 +55,7 @@ python main.py
 
 
 ## How to make the fan control your own
-You can tune up the fan control values referencing `fancontrol.sample.json`.
+You can tune up the fan control values referencing `fancontrol.sample/`.
 
 | Key               | Description                                                                                  | Type    |
 | ----------------- | -------------------------------------------------------------------------------------------- | ------- |

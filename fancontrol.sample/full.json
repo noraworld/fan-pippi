@@ -1,0 +1,11 @@
+{
+    "function": [
+        {
+            "min_temperature": 0,
+            "max_temperature": 1000,
+            "min_speed": 100,
+            "max_speed": 100,
+            "interval": 60
+        }
+    ]
+}
