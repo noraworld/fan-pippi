@@ -10,7 +10,7 @@ sudo apt -y install libraspberrypi-bin
 pip install -r requirements.txt
 ```
 
-A reboot is required after the installation to perform `vcgencmd` without a root privilege.
+A reboot is required after the installation so that `vcgencmd` can be performed without a root privilege.
 
 
 
