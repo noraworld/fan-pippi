@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# https://bulbapedia.bulbagarden.net/wiki/Metronome_(move)
+
+
+
+main() {
+  type="$1"
+  project_path="$(dirname "$(realpath "$0")")/.."
+  sample_file_relative_path="fancontrol.sample/$type.json"
+  sample_file_fullpath="$project_path/$sample_file_relative_path"
+
+  validate "$@"
+
+  ln -sf "$sample_file_fullpath" "$project_path/fancontrol.json"
+}
+
+
+
+validate() {
+  if [ "$#" -ne 1 ]; then
+    echo "Error: The number of arguments is wrong." >&2
+    exit 1
+  fi
+
+  if ! [ -e "$sample_file_fullpath" ]; then
+    echo "Error: No such file: $sample_file_relative_path" >&2
+    exit 1
+  fi
+}
+
+
+
+main "$@"
