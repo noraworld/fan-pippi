@@ -5,28 +5,83 @@
 
 
 main() {
-  type="$1"
+  command="$1"
+  type="$2"
+
   project_path="$(dirname "$(realpath "$0")")/.."
   sample_file_relative_path="fancontrol.sample/$type.json"
   sample_file_fullpath="$project_path/$sample_file_relative_path"
 
   validate "$@"
 
+  case "$command" in
+    "get")
+      get_type
+      ;;
+    "set")
+      set_type
+      ;;
+    "list")
+      list_type
+      ;;
+  esac
+}
+
+
+
+get_type() {
+  basename "$(readlink "$project_path/fancontrol.json")" | sed -e 's/\.json$//'
+}
+
+
+
+set_type() {
   ln -sf "$sample_file_fullpath" "$project_path/fancontrol.json"
 }
 
 
 
-validate() {
-  if [ "$#" -ne 1 ]; then
-    echo "Error: The number of arguments is wrong." >&2
-    exit 1
-  fi
+list_type() {
+  ls "$project_path/fancontrol.sample" | sed -e 's/\.json$//'
+}
 
-  if ! [ -e "$sample_file_fullpath" ]; then
-    echo "Error: No such file: $sample_file_relative_path" >&2
-    exit 1
-  fi
+
+
+validate() {
+  case "$command" in
+    "")
+      echo "Error: Missing arguments" >&2
+      exit 1
+      ;;
+    "get")
+      if [ "$#" -ne 1 ]; then
+        echo "Error: The number of arguments is wrong" >&2
+        exit 1
+      fi
+      ;;
+    "set")
+      if [ "$#" -ne 2 ]; then
+        echo "Error: The number of arguments is wrong" >&2
+        exit 1
+      fi
+
+      if ! [ -e "$sample_file_fullpath" ]; then
+        echo "Error: No such file: $sample_file_relative_path" >&2
+        echo "Info:  Choose one from $(list_type | xargs | sed "s/ /, /g")" >&2
+        exit 1
+      fi
+      ;;
+    "list")
+      if [ "$#" -ne 1 ]; then
+        echo "Error: The number of arguments is wrong" >&2
+        exit 1
+      fi
+      ;;
+    *)
+      echo "Error: Invalid command: $command" >&2
+      exit 1
+      ;;
+  esac
 }
 
 
