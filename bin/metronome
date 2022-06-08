@@ -2,6 +2,8 @@
 
 # https://bulbapedia.bulbagarden.net/wiki/Metronome_(move)
 
+PROG_NAME=$(basename "$0")
+
 
 
 main() {
@@ -12,6 +14,7 @@ main() {
   sample_file_relative_path="fancontrol.sample/$type.json"
   sample_file_fullpath="$project_path/$sample_file_relative_path"
 
+  eval "$(getoptions parser_definition) exit 1"
   validate "$@"
 
   case "$command" in
@@ -19,6 +22,10 @@ main() {
       get_type
       ;;
     "set")
+      if [ -n "$DURATION" ]; then
+        echo "$PROG_NAME set $(get_type)" | at now + "$DURATION" min
+      fi
+
       set_type
       ;;
     "list")
@@ -82,6 +89,15 @@ validate() {
       exit 1
       ;;
   esac
+}
+
+
+
+parser_definition() {
+  setup REST help:usage -- "Usage: $PROG_NAME [options]... [arguments]..." ''
+  msg -- 'Options:'
+  param DURATION    --for  -- "Returns to the current type after the specified number of minutes"
+  disp  :usage   -h --help -- "Print help message and exit"
 }
 
 
