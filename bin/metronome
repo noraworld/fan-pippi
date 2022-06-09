@@ -6,7 +6,9 @@ set -eu
 
 PROG_NAME=$(basename "$0")
 
-. ./lib/parser
+# shellcheck disable=SC1090
+# shellcheck disable=SC1091
+. "$(dirname "$(realpath "$0")")"/lib/parser
 
 
 
