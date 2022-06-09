@@ -2,19 +2,24 @@
 
 # https://bulbapedia.bulbagarden.net/wiki/Metronome_(move)
 
+set -eu
+
 PROG_NAME=$(basename "$0")
+
+. ./lib/parser
 
 
 
 main() {
   command="$1"
-  type="$2"
+  set +u && type="$2" && set -u
 
   project_path="$(dirname "$(realpath "$0")")/.."
   sample_file_relative_path="fancontrol.sample/$type.json"
   sample_file_fullpath="$project_path/$sample_file_relative_path"
 
-  eval "$(getoptions parser_definition) exit 1"
+  parse "$@"
+  eval "set -- $REST"
   validate "$@"
 
   case "$command" in
@@ -89,15 +94,6 @@ validate() {
       exit 1
       ;;
   esac
-}
-
-
-
-parser_definition() {
-  setup REST help:usage -- "Usage: $PROG_NAME [options]... [arguments]..." ''
-  msg -- 'Options:'
-  param DURATION    --for  -- "Returns to the current type after the specified number of minutes"
-  disp  :usage   -h --help -- "Print help message and exit"
 }
 
 
