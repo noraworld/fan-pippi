@@ -2,7 +2,7 @@
     "function": [
         {
             "min_temperature": 0,
-            "max_temperature": 60,
+            "max_temperature": 65,
             "min_speed": 0,
             "max_speed": 0,
             "interval": 60
