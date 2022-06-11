@@ -1,3 +1,4 @@
 setuptools
 vcgencmd
 python-dotenv
+RPi.GPIO
