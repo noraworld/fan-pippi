@@ -39,7 +39,7 @@ cp .env.sample .env
 | Key        | Description                                                                                               | Type    | Sample value |
 | ---------- | --------------------------------------------------------------------------------------------------------- | ------- | :----------: |
 | `FAN_PIN`  | A GPIO pin number in which a fan control cable (a blue cable in general) is plugged (see the image below) | Integer | `14`         |
-| `PWM_FREQ` | A PWM frequency                                                                                           | Integer | `25`         |
+| `PWM_FREQ` | A PWM frequency                                                                                           | Integer | `45`         |
 
 ![](https://prismic-io.s3.amazonaws.com/rpf-products/3495afb8-59f5-4972-86df-cd292b234745_Case+Fan+Instructional+diagram.png)
 _References: https://www.raspberrypi.com/products/raspberry-pi-4-case-fan/_
