@@ -2,36 +2,29 @@
     "function": [
         {
             "min_temperature": 0,
-            "max_temperature": 40,
+            "max_temperature": 50,
             "min_speed": 0,
             "max_speed": 0,
             "interval": 60
         },
         {
-            "min_temperature": 40,
-            "max_temperature": 50,
-            "min_speed": 0,
-            "max_speed": 30,
-            "interval": 60
-        },
-        {
             "min_temperature": 50,
-            "max_temperature": 55,
-            "min_speed": 30,
-            "max_speed": 45,
-            "interval": 60
-        },
-        {
-            "min_temperature": 55,
             "max_temperature": 60,
-            "min_speed": 45,
-            "max_speed": 70,
+            "min_speed": 0,
+            "max_speed": 20,
             "interval": 60
         },
         {
             "min_temperature": 60,
+            "max_temperature": 65,
+            "min_speed": 20,
+            "max_speed": 50,
+            "interval": 60
+        },
+        {
+            "min_temperature": 65,
             "max_temperature": 1000,
-            "min_speed": 100,
+            "min_speed": 50,
             "max_speed": 100,
             "interval": 60
         }
