@@ -67,6 +67,8 @@ You can tune up the fan control values referencing `fancontrol.sample/`.
 
 TODO: Make a graph like [this](https://www.google.com/search?q=cpu+fan+control&tbm=isch#imgrc=uiX82SZ311m20M).
 
+TIPS: As you may know, the more a CPU fan speed gets down, the more a CPU temperature goes up. Try to find out your best preference while tuning up.
+
 
 
 ## Daemonization
