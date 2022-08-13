@@ -24,7 +24,7 @@
         {
             "min_temperature": 65,
             "max_temperature": 1000,
-            "min_speed": 50,
+            "min_speed": 100,
             "max_speed": 100,
             "interval": 60
         }
